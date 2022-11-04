@@ -55,6 +55,10 @@ export interface GitlabSettings {
 }
 
 export interface S3Settings {
+  useS3: boolean;
+  keepLocal: boolean;
+  overrideURL: string;
+  overrideSuffix: string;
   accessKeyId: string;
   secretAccessKey: string;
   bucket: string;
