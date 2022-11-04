@@ -18,6 +18,12 @@ export default {
     recreateRepo: false,
   },
   s3: {
+    useS3: false,
+    keepLocal: true,
+    // overrideURL: 'github.example.com/org/repo/raw/master',
+    overrideURL: '{{overrideURL}}',
+    // overrideSuffix if needed
+    overrideSuffix: '{{overrideSuffix}}',
     accessKeyId: '{{accessKeyId}}',
     secretAccessKey: '{{secretAccessKey}}',
     bucket: 'my-gitlab-bucket',

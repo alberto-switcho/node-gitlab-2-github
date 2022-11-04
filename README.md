@@ -102,6 +102,18 @@ This is useful when debugging this tool or a specific migration. You will always
 
 S3 can be used to store attachments from issues. If omitted, `has attachment` label will be added to GitHub issue.
 
+### useS3
+
+If this is set to false then the S3 processing will occur but files will not actually be posted to the S3 bucket.
+
+#### keepLocal
+
+If this is set to true then, in addition to any S3 processing, the file will also be saved in a local `attachments` directory.
+
+#### overrideURL and overrideSuffix
+
+If defined, these variables will rewrite the attachment URL to point at a custom URL, potentially instead of S3. For example, this mechanism may allow issue attachments to be hosted in a GitHub repo or other web service.
+
 #### s3.accessKeyId and s3.secretAccessKey
 
 AWS [credentials](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys) that are used to copy attachments from GitLab into the S3 bucket.
